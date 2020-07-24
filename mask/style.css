@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+img {
+    width: 400px;
+    mask-image: linear-gradient(to bottom, transparent 25%, black 75%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 25%, black 75%);
+}
+
+img:hover {
+ 
+    mask-image: linear-gradient(to bottom, transparent 25%, white 75%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 25%, white 75%);
+}

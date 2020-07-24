@@ -1,0 +1,36 @@
+body {
+    counter-reset: section;
+    counter-reset: heading;
+}
+
+h3::before {
+    counter-increment: section;
+    content: counter(section) ": ";
+}
+/*
+el atributo counter nos permite hacer un conteo dependiendo de cuantos atributos tengamos 
+por cada counter se tiene que crear un counter-reset
+*/
+h1::before {
+    content: counter(heading) ") ";
+    counter-increment: heading;
+}
+
+h1 {
+    counter-reset: subheading;
+}
+
+h2::before {
+    content: counter(heading) "." counter(subheading) ") ";
+    counter-increment: subheading;
+}
+
+ol {
+    counter-reset: counter;
+    list-style-type: none;
+}
+
+li::before {
+    counter-increment: counter;
+    content: counters(counter, '.')" ";
+}
